@@ -19,7 +19,7 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-20 md:py-32 bg-foreground relative overflow-hidden">
+    <section className="py-20 md:py-32 bg-card dark:bg-muted relative overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-5"
@@ -37,19 +37,19 @@ const CTASection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 animate-fade-in-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-body font-medium text-primary-foreground">
+            <span className="text-sm font-body font-medium text-foreground">
               Join 50,000+ Indians supporting local
             </span>
           </div>
 
           {/* Heading */}
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-fade-in-up animation-delay-100">
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 animate-fade-in-up animation-delay-100">
             Be Part of the{" "}
             <span className="text-primary">Revolution</span>
           </h2>
 
           {/* Subheading */}
-          <p className="font-body text-lg md:text-xl text-primary-foreground/70 mb-10 animate-fade-in-up animation-delay-200">
+          <p className="font-body text-lg md:text-xl text-muted-foreground mb-10 animate-fade-in-up animation-delay-200">
             Subscribe to discover new Indian brands, exclusive offers, and stories of 
             entrepreneurs transforming India.
           </p>
@@ -77,7 +77,7 @@ const CTASection = () => {
           </form>
 
           {/* Trust Badges */}
-          <div className="mt-8 flex items-center justify-center gap-6 text-primary-foreground/50 animate-fade-in-up animation-delay-400">
+          <div className="mt-8 flex items-center justify-center gap-6 text-muted-foreground animate-fade-in-up animation-delay-400">
             <span className="font-body text-sm">✓ No spam</span>
             <span className="font-body text-sm">✓ Weekly updates</span>
             <span className="font-body text-sm">✓ Unsubscribe anytime</span>
