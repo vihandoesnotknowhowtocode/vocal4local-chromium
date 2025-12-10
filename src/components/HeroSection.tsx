@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Star } from "lucide-react";
 import BloomBackground from "./BloomBackground";
-
+import LiquidGlass from "./LiquidGlass";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background">
@@ -14,12 +14,14 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full shadow-soft mb-8 animate-fade-in-up">
-            <Heart className="w-4 h-4 text-primary fill-primary" />
-            <span className="text-sm font-body font-medium text-muted-foreground">
-              Proudly Supporting Indian Brands
-            </span>
-          </div>
+          <LiquidGlass className="inline-block mb-8 animate-fade-in-up" intensity="light">
+            <div className="flex items-center gap-2 px-4 py-2">
+              <Heart className="w-4 h-4 text-primary fill-primary" />
+              <span className="text-sm font-body font-medium text-foreground">
+                Proudly Supporting Indian Brands
+              </span>
+            </div>
+          </LiquidGlass>
 
           {/* Main Heading */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up animation-delay-100">

@@ -1,6 +1,6 @@
 import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import LiquidGlass from "./LiquidGlass";
 const brands = [
   {
     id: 1,
@@ -84,49 +84,51 @@ const FeaturedBrands = () => {
         {/* Brands Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {brands.map((brand, index) => (
-            <div
+            <LiquidGlass
               key={brand.id}
-              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-lg transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="animate-fade-in-up hover:-translate-y-2 transition-transform duration-500"
+              intensity="medium"
             >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={brand.image}
-                  alt={brand.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                  <span className={`${brand.color} backdrop-blur-sm px-3 py-1 rounded-full text-xs font-body font-medium text-foreground`}>
-                    {brand.category}
-                  </span>
-                  <div className="flex items-center gap-1 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                    <Star className="w-3 h-3 text-cyan fill-cyan" />
-                    <span className="text-xs font-body font-semibold text-foreground">{brand.rating}</span>
+              <div style={{ animationDelay: `${index * 100}ms` }}>
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden rounded-t-2xl">
+                  <img
+                    src={brand.image}
+                    alt={brand.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                    <span className={`${brand.color} backdrop-blur-sm px-3 py-1 rounded-full text-xs font-body font-medium text-foreground`}>
+                      {brand.category}
+                    </span>
+                    <div className="flex items-center gap-1 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
+                      <Star className="w-3 h-3 text-cyan fill-cyan" />
+                      <span className="text-xs font-body font-semibold text-foreground">{brand.rating}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {brand.name}
-                </h3>
-                <p className="font-body text-muted-foreground text-sm mb-4">
-                  {brand.description}
-                </p>
-                <a 
-                  href={brand.website} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center font-body text-foreground hover:underline underline-offset-4 transition-all"
-                >
-                  Visit Brand
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </a>
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {brand.name}
+                  </h3>
+                  <p className="font-body text-muted-foreground text-sm mb-4">
+                    {brand.description}
+                  </p>
+                  <a 
+                    href={brand.website} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center font-body text-foreground hover:underline underline-offset-4 transition-all"
+                  >
+                    Visit Brand
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                </div>
               </div>
-            </div>
+            </LiquidGlass>
           ))}
         </div>
 
