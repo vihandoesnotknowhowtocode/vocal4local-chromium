@@ -66,7 +66,7 @@ const HeroSection = () => {
             <div className="text-center flex flex-col items-center">
               <div className="flex items-center gap-1">
                 <span className="font-display text-3xl md:text-4xl font-bold text-foreground">4.9</span>
-                <Star className="w-6 h-6 text-gold fill-gold" />
+                <Star className="w-6 h-6 text-cyan fill-cyan" />
               </div>
               <div className="font-body text-sm text-muted-foreground mt-1">Average Rating</div>
             </div>

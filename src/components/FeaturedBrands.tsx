@@ -9,7 +9,7 @@ const brands = [
     description: "Celebrating India's craft traditions since 1960",
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop",
-    color: "bg-terracotta/10",
+    color: "bg-secondary/20",
     website: "https://www.fabindia.com",
   },
   {
@@ -19,7 +19,7 @@ const brands = [
     description: "Traditional Indian drinks with a modern twist",
     rating: 4.9,
     image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop",
-    color: "bg-primary/10",
+    color: "bg-primary/20",
     website: "https://www.paperboatdrinks.com",
   },
   {
@@ -29,7 +29,7 @@ const brands = [
     description: "Ayurvedic skincare rooted in ancient wisdom",
     rating: 4.7,
     image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=300&fit=crop",
-    color: "bg-secondary/10",
+    color: "bg-cyan/20",
     website: "https://www.khadinatural.com",
   },
   {
@@ -39,7 +39,7 @@ const brands = [
     description: "Precision craftsmanship, Made in India",
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=300&fit=crop",
-    color: "bg-gold/10",
+    color: "bg-indigo/20",
     website: "https://www.titan.co.in",
   },
   {
@@ -49,7 +49,7 @@ const brands = [
     description: "Age-old Indian beauty secrets",
     rating: 4.9,
     image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=300&fit=crop",
-    color: "bg-emerald/10",
+    color: "bg-secondary/20",
     website: "https://www.forestessentialsindia.com",
   },
   {
@@ -59,7 +59,7 @@ const brands = [
     description: "Sustainable luxury inspired by Indian heritage",
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
-    color: "bg-accent/10",
+    color: "bg-primary/20",
     website: "https://www.goodearth.in",
   },
 ];
@@ -102,7 +102,7 @@ const FeaturedBrands = () => {
                     {brand.category}
                   </span>
                   <div className="flex items-center gap-1 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                    <Star className="w-3 h-3 text-gold fill-gold" />
+                    <Star className="w-3 h-3 text-cyan fill-cyan" />
                     <span className="text-xs font-body font-semibold text-foreground">{brand.rating}</span>
                   </div>
                 </div>

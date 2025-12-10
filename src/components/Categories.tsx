@@ -14,49 +14,49 @@ const categories = [
     name: "Fashion", 
     icon: Shirt, 
     count: 120,
-    gradient: "from-primary to-accent"
+    gradient: "from-primary to-cyan"
   },
   { 
     name: "Food & Beverages", 
     icon: Utensils, 
     count: 85,
-    gradient: "from-emerald to-emerald-light"
+    gradient: "from-secondary to-slate"
   },
   { 
     name: "Beauty & Wellness", 
     icon: Sparkles, 
     count: 95,
-    gradient: "from-accent to-gold"
+    gradient: "from-cyan to-primary"
   },
   { 
     name: "Home & Living", 
     icon: Home, 
     count: 70,
-    gradient: "from-terracotta to-primary"
+    gradient: "from-indigo to-primary"
   },
   { 
     name: "Organic & Natural", 
     icon: Leaf, 
     count: 60,
-    gradient: "from-secondary to-emerald"
+    gradient: "from-secondary to-cyan"
   },
   { 
     name: "Accessories", 
     icon: Watch, 
     count: 55,
-    gradient: "from-gold to-accent"
+    gradient: "from-primary to-indigo"
   },
   { 
     name: "Gifts & Crafts", 
     icon: Gift, 
     count: 80,
-    gradient: "from-primary to-terracotta"
+    gradient: "from-cyan to-secondary"
   },
   { 
     name: "Books & Stationery", 
     icon: BookOpen, 
     count: 45,
-    gradient: "from-emerald-light to-secondary"
+    gradient: "from-indigo to-cyan"
   },
 ];
 
