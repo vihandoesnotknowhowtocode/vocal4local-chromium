@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <Button variant="hero" size="default">
               Join Movement
             </Button>
@@ -70,9 +72,12 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4">
-                Join Movement
-              </Button>
+              <div className="flex items-center justify-between mt-4">
+                <ThemeToggle />
+                <Button variant="hero" size="default">
+                  Join Movement
+                </Button>
+              </div>
             </nav>
           </div>
         )}
