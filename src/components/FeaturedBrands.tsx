@@ -10,6 +10,7 @@ const brands = [
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop",
     color: "bg-terracotta/10",
+    website: "https://www.fabindia.com",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const brands = [
     rating: 4.9,
     image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop",
     color: "bg-primary/10",
+    website: "https://www.paperboatdrinks.com",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const brands = [
     rating: 4.7,
     image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=300&fit=crop",
     color: "bg-secondary/10",
+    website: "https://www.khadinatural.com",
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ const brands = [
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=300&fit=crop",
     color: "bg-gold/10",
+    website: "https://www.titan.co.in",
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ const brands = [
     rating: 4.9,
     image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=300&fit=crop",
     color: "bg-emerald/10",
+    website: "https://www.forestessentialsindia.com",
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ const brands = [
     rating: 4.8,
     image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
     color: "bg-accent/10",
+    website: "https://www.goodearth.in",
   },
 ];
 
@@ -110,10 +116,15 @@ const FeaturedBrands = () => {
                 <p className="font-body text-muted-foreground text-sm mb-4">
                   {brand.description}
                 </p>
-                <Button variant="ghost" className="group/btn p-0 h-auto font-body text-primary hover:text-primary/80">
+                <a 
+                  href={brand.website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center font-body text-foreground hover:underline underline-offset-4 transition-all"
+                >
                   Visit Brand
-                  <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </a>
               </div>
             </div>
           ))}
