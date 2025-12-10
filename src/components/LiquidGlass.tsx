@@ -4,19 +4,18 @@ import { cn } from "@/lib/utils";
 interface LiquidGlassProps {
   children: ReactNode;
   className?: string;
-  intensity?: "light" | "medium" | "strong";
+  // Intensity prop is removed as its primary function (CSS blur/opacity) is being replaced by the SVG filter.
 }
 
-const LiquidGlass = ({ children, className, intensity = "medium" }: LiquidGlassProps) => {
-  const intensityClasses = {
-    light: "backdrop-blur-sm bg-white/5 dark:bg-white/5",
-    medium: "backdrop-blur-md bg-white/10 dark:bg-white/10",
-    strong: "backdrop-blur-xl bg-white/15 dark:bg-white/15",
-  };
+// **Note:** This effect relies heavily on the SVG filter and its appearance
+// will depend on the content behind it and the specific filter values.
+// The default glassmorphism appearance (backdrop blur, background color) has been removed.
 
+const LiquidGlass = ({ children, className }: LiquidGlassProps) => {
   return (
     <div className={cn("relative group", className)}>
       {/* SVG Filter for Chrome - Liquid Glass Refraction */}
+      {/* The SVG element must be present in the DOM for the filter to be applied. */}
       <svg className="absolute w-0 h-0" aria-hidden="true">
         <defs>
           <filter id="liquid-glass-filter" colorInterpolationFilters="sRGB">
@@ -27,23 +26,20 @@ const LiquidGlass = ({ children, className, intensity = "medium" }: LiquidGlassP
               seed="5"
               result="noise"
             />
+            {/* feDisplacementMap uses the noise to distort the SourceGraphic (the content being filtered) */}
             <feDisplacementMap
               in="SourceGraphic"
               in2="noise"
-              scale="3"
+              scale="3" // Controls the intensity of the displacement/refraction
               xChannelSelector="R"
               yChannelSelector="G"
             />
           </filter>
-          <linearGradient id="glass-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgba(255,255,255,0.4)" />
-            <stop offset="50%" stopColor="rgba(255,255,255,0.1)" />
-            <stop offset="100%" stopColor="rgba(255,255,255,0.3)" />
-          </linearGradient>
         </defs>
       </svg>
 
-      {/* Glass container */}
+      {/* Glass container - Simplified to only apply the SVG filter */}
+      {/* **IMPORTANT:** The filter is applied via the 'filter' style property. */}
       <div
         className={cn(
           "relative rounded-2xl overflow-hidden",
@@ -52,12 +48,21 @@ const LiquidGlass = ({ children, className, intensity = "medium" }: LiquidGlassP
           "transition-all duration-500 ease-out",
           "group-hover:shadow-[0_8px_40px_rgba(59,130,246,0.15)]",
           "group-hover:border-white/30 dark:group-hover:border-white/20",
-          intensityClasses[intensity]
+          // Removed basic CSS glass styles like backdrop-blur and bg-white/x
         )}
         style={{
-          WebkitBackdropFilter: "blur(12px)",
+          // Apply the SVG filter here. This will only work in Chrome/WebKit browsers
+          // that fully support applying SVG filters to HTML content in this manner.
+          filter: "url(#liquid-glass-filter)",
+          // You might still want a subtle backdrop blur, but keeping strictly to *only*
+          // the SVG effect means this CSS-based property is often removed.
+          // I will remove the WebkitBackdropFilter line for strict adherence.
+          // WebkitBackdropFilter: "blur(12px)", 
         }}
       >
+        {/* Specular highlights, inner glow, and refraction shimmer are kept 
+            as they contribute to the 'glass' look, but are not the SVG filter itself. */}
+        
         {/* Specular highlight - top edge */}
         <div 
           className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"
@@ -84,7 +89,8 @@ const LiquidGlass = ({ children, className, intensity = "medium" }: LiquidGlassP
           style={{
             background: "linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
             backgroundSize: "200% 200%",
-            animation: "liquid-shimmer 8s ease-in-out infinite",
+            // Ensure you have a global CSS animation defined for this keyframe
+            animation: "liquid-shimmer 8s ease-in-out infinite", 
           }}
         />
 
