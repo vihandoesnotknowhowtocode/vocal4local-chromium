@@ -3,9 +3,9 @@ import { ArrowRight, Heart, Star } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-subtle" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-card" />
       <div 
         className="absolute inset-0 opacity-5"
         style={{
