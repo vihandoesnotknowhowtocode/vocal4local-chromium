@@ -45,13 +45,12 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-300">
-            <Button variant="hero" size="xl" className="group">
-              Explore Brands
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="hero-outline" size="xl">
-              Submit Your Brand
-            </Button>
+            <a href="#brands">
+              <Button variant="hero" size="xl" className="group">
+                Explore Brands
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
           </div>
 
           {/* Stats */}
