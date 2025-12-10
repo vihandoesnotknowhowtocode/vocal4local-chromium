@@ -194,6 +194,15 @@
   }
 }
 
+@keyframes liquid-shimmer {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }

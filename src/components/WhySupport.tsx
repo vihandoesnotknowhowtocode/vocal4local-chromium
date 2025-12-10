@@ -1,5 +1,5 @@
 import { Users, Briefcase, TreeDeciduous, Heart } from "lucide-react";
-
+import LiquidGlass from "./LiquidGlass";
 const benefits = [
   {
     icon: Users,
@@ -55,34 +55,39 @@ const WhySupport = () => {
         {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {benefits.map((benefit, index) => (
-            <div
+            <LiquidGlass
               key={benefit.title}
-              className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-500 text-center hover:-translate-y-2 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="animate-fade-in-up"
+              intensity="medium"
             >
-              {/* Icon */}
-              <div className="inline-flex w-16 h-16 rounded-2xl bg-gradient-hero items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow">
-                <benefit.icon className="w-8 h-8 text-primary-foreground" />
-              </div>
-
-              {/* Stat */}
-              <div className="mb-4">
-                <div className="font-display text-3xl md:text-4xl font-bold text-gradient">
-                  {benefit.stat}
+              <div
+                className="p-8 text-center hover:-translate-y-2 transition-transform duration-500"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Icon */}
+                <div className="inline-flex w-16 h-16 rounded-2xl bg-gradient-hero items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                  <benefit.icon className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <div className="font-body text-xs text-muted-foreground uppercase tracking-wider">
-                  {benefit.statLabel}
-                </div>
-              </div>
 
-              {/* Content */}
-              <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                {benefit.title}
-              </h3>
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                {benefit.description}
-              </p>
-            </div>
+                {/* Stat */}
+                <div className="mb-4">
+                  <div className="font-display text-3xl md:text-4xl font-bold text-gradient">
+                    {benefit.stat}
+                  </div>
+                  <div className="font-body text-xs text-muted-foreground uppercase tracking-wider">
+                    {benefit.statLabel}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="font-display text-xl font-bold text-foreground mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            </LiquidGlass>
           ))}
         </div>
 
