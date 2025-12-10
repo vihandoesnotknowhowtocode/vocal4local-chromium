@@ -44,9 +44,11 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
-            <Button variant="hero" size="default">
-              Join Movement
-            </Button>
+            <a href="https://www.mygov.in/podcast/lighting-lives-through-vocal-local/" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="default">
+                Join Movement
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,9 +76,11 @@ const Header = () => {
               ))}
               <div className="flex items-center justify-between mt-4">
                 <ThemeToggle />
-                <Button variant="hero" size="default">
-                  Join Movement
-                </Button>
+                <a href="https://www.mygov.in/podcast/lighting-lives-through-vocal-local/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="hero" size="default">
+                    Join Movement
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>
