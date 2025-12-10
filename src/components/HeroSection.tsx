@@ -1,22 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Star } from "lucide-react";
+import BloomBackground from "./BloomBackground";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-card" />
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e07020' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 left-10 w-20 h-20 rounded-full bg-primary/10 blur-2xl animate-float" />
-      <div className="absolute bottom-1/3 right-10 w-32 h-32 rounded-full bg-accent/10 blur-3xl animate-float animation-delay-300" />
-      <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full bg-secondary/10 blur-2xl animate-float animation-delay-500" />
+      {/* 3D Bloom Background */}
+      <BloomBackground />
+      
+      {/* Background Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-card/90 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
