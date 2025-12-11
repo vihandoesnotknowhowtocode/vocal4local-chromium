@@ -1,6 +1,13 @@
 import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LiquidGlass from "./LiquidGlass";
+import fabindiaImg from "@/assets/fabindia-products.jpg";
+import paperboatImg from "@/assets/paperboat-products.jpg";
+import khadiImg from "@/assets/khadi-products.jpg";
+import titanImg from "@/assets/titan-products.jpg";
+import forestEssentialsImg from "@/assets/forest-essentials-products.jpg";
+import goodEarthImg from "@/assets/good-earth-products.jpg";
+
 const brands = [
   {
     id: 1,
@@ -8,7 +15,7 @@ const brands = [
     category: "Fashion & Lifestyle",
     description: "Celebrating India's craft traditions since 1960",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=300&fit=crop",
+    image: fabindiaImg,
     color: "bg-secondary/20",
     website: "https://www.fabindia.com",
   },
@@ -18,7 +25,7 @@ const brands = [
     category: "Beverages",
     description: "Traditional Indian drinks with a modern twist",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop",
+    image: paperboatImg,
     color: "bg-primary/20",
     website: "https://www.paperboatdrinks.com",
   },
@@ -28,7 +35,7 @@ const brands = [
     category: "Beauty & Wellness",
     description: "Ayurvedic skincare rooted in ancient wisdom",
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=300&fit=crop",
+    image: khadiImg,
     color: "bg-cyan/20",
     website: "https://www.khadinatural.com",
   },
@@ -38,7 +45,7 @@ const brands = [
     category: "Watches & Accessories",
     description: "Precision craftsmanship, Made in India",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=300&fit=crop",
+    image: titanImg,
     color: "bg-indigo/20",
     website: "https://www.titan.co.in",
   },
@@ -48,7 +55,7 @@ const brands = [
     category: "Luxury Ayurveda",
     description: "Age-old Indian beauty secrets",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=300&fit=crop",
+    image: forestEssentialsImg,
     color: "bg-secondary/20",
     website: "https://www.forestessentialsindia.com",
   },
@@ -58,7 +65,7 @@ const brands = [
     category: "Home & Living",
     description: "Sustainable luxury inspired by Indian heritage",
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+    image: goodEarthImg,
     color: "bg-primary/20",
     website: "https://www.goodearth.in",
   },
