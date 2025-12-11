@@ -87,7 +87,6 @@ const FeaturedBrands = () => {
             <LiquidGlass
               key={brand.id}
               className="animate-fade-in-up hover:-translate-y-2 transition-transform duration-500"
-              intensity="medium"
             >
               <div style={{ animationDelay: `${index * 100}ms` }}>
                 {/* Image */}
@@ -134,9 +133,11 @@ const FeaturedBrands = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button variant="hero-outline" size="lg">
-            View All Brands
-          </Button>
+          <LiquidGlass className="inline-block">
+            <button className="px-8 py-3 font-body font-semibold text-foreground hover:text-primary transition-colors">
+              View All Brands
+            </button>
+          </LiquidGlass>
         </div>
       </div>
     </section>
