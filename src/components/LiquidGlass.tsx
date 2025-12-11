@@ -61,9 +61,9 @@ const LiquidGlass = ({ children, className }: LiquidGlassProps) => {
       <div
         className={cn(
           "relative rounded-2xl overflow-hidden",
-          "border border-white/30 dark:border-white/15",
+          "border border-border/50 dark:border-border/30",
           "transition-all duration-500 ease-out",
-          "group-hover:border-white/40 dark:group-hover:border-white/25",
+          "group-hover:border-primary/30 dark:group-hover:border-primary/40",
         )}
         style={{
           // Chrome-only: backdrop-filter with SVG filter for true refraction

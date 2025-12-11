@@ -33,7 +33,7 @@ const benefits = [
 
 const WhySupport = () => {
   return (
-    <section id="about" className="py-20 md:py-32 bg-muted/30 relative overflow-hidden">
+    <section id="about" className="py-20 md:py-32 bg-muted/30 border-y border-border/30 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
@@ -91,7 +91,7 @@ const WhySupport = () => {
         </div>
 
         {/* Quote Section */}
-        <div className="mt-20 max-w-3xl mx-auto text-center">
+        <div className="mt-20 max-w-3xl mx-auto text-center border border-border/50 dark:border-border/30 rounded-2xl p-8 md:p-12 bg-card/50">
           <blockquote className="relative">
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-8xl text-primary/10 font-display">"</div>
             <p className="font-display text-2xl md:text-3xl text-foreground italic leading-relaxed relative z-10">
