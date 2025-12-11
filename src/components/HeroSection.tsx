@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Star } from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
 import BloomBackground from "./BloomBackground";
 import LiquidGlass from "./LiquidGlass";
 const HeroSection = () => {
@@ -50,24 +49,6 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-border animate-fade-in-up animation-delay-400">
-            <div className="text-center">
-              <div className="font-display text-3xl md:text-4xl font-bold text-foreground">500+</div>
-              <div className="font-body text-sm text-muted-foreground mt-1">Indian Brands</div>
-            </div>
-            <div className="text-center">
-              <div className="font-display text-3xl md:text-4xl font-bold text-foreground">50K+</div>
-              <div className="font-body text-sm text-muted-foreground mt-1">Happy Supporters</div>
-            </div>
-            <div className="text-center flex flex-col items-center">
-              <div className="flex items-center gap-1">
-                <span className="font-display text-3xl md:text-4xl font-bold text-foreground">4.9</span>
-                <Star className="w-6 h-6 text-cyan fill-cyan" />
-              </div>
-              <div className="font-body text-sm text-muted-foreground mt-1">Average Rating</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

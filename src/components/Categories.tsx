@@ -94,12 +94,9 @@ const Categories = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-display text-base md:text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+              <h3 className="font-display text-base md:text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                 {category.name}
               </h3>
-              <p className="font-body text-sm text-muted-foreground">
-                {category.count}+ brands
-              </p>
 
               {/* Arrow */}
               <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-muted flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
