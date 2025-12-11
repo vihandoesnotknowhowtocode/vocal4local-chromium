@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
+import LiquidGlass from "./LiquidGlass";
 
 const CTASection = () => {
   const [email, setEmail] = useState("");
@@ -81,6 +83,18 @@ const CTASection = () => {
             <span className="font-body text-sm">✓ No spam</span>
             <span className="font-body text-sm">✓ Weekly updates</span>
             <span className="font-body text-sm">✓ Unsubscribe anytime</span>
+          </div>
+
+          {/* About Us Link */}
+          <div className="mt-12 animate-fade-in-up animation-delay-500">
+            <Link to="/about">
+              <LiquidGlass className="inline-block">
+                <span className="px-6 py-3 font-body font-semibold text-foreground hover:text-primary transition-colors flex items-center gap-2">
+                  Learn About Us
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </LiquidGlass>
+            </Link>
           </div>
         </div>
       </div>
