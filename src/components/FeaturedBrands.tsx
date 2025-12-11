@@ -1,4 +1,4 @@
-import { Star, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LiquidGlass from "./LiquidGlass";
 import fabindiaImg from "@/assets/fabindia-products.jpg";
@@ -104,14 +104,10 @@ const FeaturedBrands = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                  <div className="absolute bottom-4 left-4">
                     <span className={`${brand.color} backdrop-blur-sm px-3 py-1 rounded-full text-xs font-body font-medium text-foreground`}>
                       {brand.category}
                     </span>
-                    <div className="flex items-center gap-1 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                      <Star className="w-3 h-3 text-cyan fill-cyan" />
-                      <span className="text-xs font-body font-semibold text-foreground">{brand.rating}</span>
-                    </div>
                   </div>
                 </div>
 
@@ -136,15 +132,6 @@ const FeaturedBrands = () => {
               </div>
             </LiquidGlass>
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <LiquidGlass className="inline-block">
-            <button className="px-8 py-3 font-body font-semibold text-foreground hover:text-primary transition-colors">
-              View All Brands
-            </button>
-          </LiquidGlass>
         </div>
       </div>
     </section>

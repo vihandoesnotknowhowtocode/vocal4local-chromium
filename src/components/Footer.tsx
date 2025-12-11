@@ -1,4 +1,4 @@
-import { Heart, Instagram, Twitter, Facebook, Linkedin } from "lucide-react";
+import { Heart, Instagram, Twitter, Facebook } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -28,10 +28,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/vocalforlocal.in/", label: "Instagram" },
+    { icon: Twitter, href: "https://twitter.com/naaborhood", label: "Twitter" },
+    { icon: Facebook, href: "https://www.facebook.com/vaborhood/", label: "Facebook" },
   ];
 
   return (
