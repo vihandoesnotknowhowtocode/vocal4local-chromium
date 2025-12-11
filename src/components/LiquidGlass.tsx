@@ -67,8 +67,8 @@ const LiquidGlass = ({ children, className }: LiquidGlassProps) => {
         )}
         style={{
           // Chrome-only: backdrop-filter with SVG filter for true refraction
-          backdropFilter: `url(#liquid-glass-${filterId}) blur(12px) saturate(180%)`,
-          WebkitBackdropFilter: `url(#liquid-glass-${filterId}) blur(12px) saturate(180%)`,
+          backdropFilter: `url(#liquid-glass-${filterId}) blur(4px) saturate(180%)`,
+          WebkitBackdropFilter: `url(#liquid-glass-${filterId}) blur(4px) saturate(180%)`,
           background: "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
           boxShadow: `
             0 8px 32px rgba(0,0,0,0.12),
