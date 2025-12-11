@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <LiquidGlass className="inline-block mb-8 animate-fade-in-up" intensity="light">
+          <LiquidGlass className="inline-block mb-8 animate-fade-in-up">
             <div className="flex items-center gap-2 px-4 py-2">
               <Heart className="w-4 h-4 text-primary fill-primary" />
               <span className="text-sm font-body font-medium text-foreground">
@@ -41,10 +41,12 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-300">
             <a href="#brands">
-              <Button variant="hero" size="xl" className="group">
-                Explore Brands
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <LiquidGlass>
+                <button className="px-8 py-4 font-body font-semibold text-foreground hover:text-primary transition-colors flex items-center gap-2 group">
+                  Explore Brands
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </LiquidGlass>
             </a>
           </div>
 

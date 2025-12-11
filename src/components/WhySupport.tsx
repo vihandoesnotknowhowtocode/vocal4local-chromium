@@ -58,7 +58,6 @@ const WhySupport = () => {
             <LiquidGlass
               key={benefit.title}
               className="animate-fade-in-up"
-              intensity="medium"
             >
               <div
                 className="p-8 text-center hover:-translate-y-2 transition-transform duration-500"
