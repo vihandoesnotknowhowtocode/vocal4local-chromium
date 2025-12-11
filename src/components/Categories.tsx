@@ -82,7 +82,7 @@ const Categories = () => {
           {categories.map((category, index) => (
             <div
               key={category.name}
-              className="group relative bg-card rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-card transition-all duration-500 cursor-pointer hover:-translate-y-2 animate-fade-in-up overflow-hidden"
+              className="group relative bg-card rounded-2xl p-6 md:p-8 border border-border/50 dark:border-border/30 shadow-soft hover:shadow-card hover:border-primary/30 dark:hover:border-primary/40 transition-all duration-500 cursor-pointer hover:-translate-y-2 animate-fade-in-up overflow-hidden"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Gradient Background on Hover */}

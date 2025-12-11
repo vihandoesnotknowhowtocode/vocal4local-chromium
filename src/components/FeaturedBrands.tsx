@@ -73,7 +73,7 @@ const brands = [
 
 const FeaturedBrands = () => {
   return (
-    <section id="brands" className="py-20 md:py-32 bg-muted/30">
+    <section id="brands" className="py-20 md:py-32 bg-muted/30 border-y border-border/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
