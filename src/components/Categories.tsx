@@ -81,31 +81,32 @@ const Categories = () => {
         {/* Categories Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {categories.map((category, index) => (
-            <div
+            <LiquidGlass
               key={category.name}
-              className="group relative bg-card rounded-2xl p-6 md:p-8 border border-border/50 dark:border-border/30 shadow-soft hover:shadow-card hover:border-primary/30 dark:hover:border-primary/40 transition-all duration-500 cursor-pointer hover:-translate-y-2 animate-fade-in-up overflow-hidden"
-              style={{ animationDelay: `${index * 50}ms` }}
+              className="animate-fade-in-up hover:-translate-y-2 transition-transform duration-500 cursor-pointer"
             >
-              {/* Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-              
-              {/* Icon */}
-              <div className={`relative w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                <category.icon className="w-6 h-6 md:w-8 md:h-8 text-primary-foreground" />
-              </div>
+              <div
+                className="relative p-6 md:p-8"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                {/* Icon */}
+                <div className={`relative w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <category.icon className="w-6 h-6 md:w-8 md:h-8 text-primary-foreground" />
+                </div>
 
-              {/* Content */}
-              <h3 className="font-display text-base md:text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                {category.name}
-              </h3>
+                {/* Content */}
+                <h3 className="font-display text-base md:text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                  {category.name}
+                </h3>
 
-              {/* Arrow */}
-              <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-muted flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
-                <svg className="w-4 h-4 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                {/* Arrow */}
+                <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-muted flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                  <svg className="w-4 h-4 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-            </div>
+            </LiquidGlass>
           ))}
         </div>
       </div>
