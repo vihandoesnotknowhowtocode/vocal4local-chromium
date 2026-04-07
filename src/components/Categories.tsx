@@ -8,6 +8,7 @@ import {
   Watch,
   BookOpen
 } from "lucide-react";
+import LiquidGlass from "./LiquidGlass";
 
 const categories = [
   { 
