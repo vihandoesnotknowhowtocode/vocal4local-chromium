@@ -91,15 +91,17 @@ const WhySupport = () => {
         </div>
 
         {/* Quote Section */}
-        <div className="mt-20 max-w-3xl mx-auto text-center border border-border/50 dark:border-border/30 rounded-2xl p-8 md:p-12 bg-card/50">
-          <blockquote className="relative">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-8xl text-primary/10 font-display">"</div>
-            <p className="font-display text-2xl md:text-3xl text-foreground italic leading-relaxed relative z-10">
-              When you buy local, you're not just purchasing a product—you're investing in dreams, 
-              preserving traditions, and building a stronger India.
-            </p>
-          </blockquote>
-        </div>
+        <LiquidGlass className="mt-20 max-w-3xl mx-auto">
+          <div className="p-8 md:p-12 text-center">
+            <blockquote className="relative">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-8xl text-primary/10 font-display">"</div>
+              <p className="font-display text-2xl md:text-3xl text-foreground italic leading-relaxed relative z-10">
+                When you buy local, you're not just purchasing a product—you're investing in dreams, 
+                preserving traditions, and building a stronger India.
+              </p>
+            </blockquote>
+          </div>
+        </LiquidGlass>
       </div>
     </section>
   );
