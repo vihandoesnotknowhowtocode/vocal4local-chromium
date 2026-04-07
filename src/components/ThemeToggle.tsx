@@ -32,13 +32,13 @@ const ThemeToggle = () => {
         className="flex items-center gap-2 px-3 py-1.5 transition-all duration-300 hover:scale-105 active:scale-95"
       >
         <Sun className={`h-4 w-4 transition-all duration-300 ${isDark ? "text-muted-foreground scale-90" : "text-primary scale-110 animate-pulse"}`} />
-        <div className="relative w-10 h-5 rounded-full bg-muted/30 overflow-hidden">
+        <div className={`relative w-10 h-5 rounded-full overflow-hidden transition-colors duration-300 ${isDark ? "bg-primary/30" : "bg-muted/50"}`}>
           <div 
-            className={`absolute top-0.5 w-4 h-4 rounded-full bg-primary shadow-lg transition-all duration-300 ease-out ${isDark ? "left-5" : "left-0.5"}`}
+            className={`absolute top-0.5 w-4 h-4 rounded-full shadow-lg transition-all duration-300 ease-out ${isDark ? "left-5 bg-primary" : "left-0.5 bg-foreground"}`}
             style={{
               boxShadow: isDark 
                 ? "0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3)" 
-                : "0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--primary) / 0.3)"
+                : "0 0 6px hsl(var(--foreground) / 0.2)"
             }}
           />
         </div>
